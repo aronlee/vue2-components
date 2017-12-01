@@ -1,0 +1,47 @@
+{
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"commonjs": true
+	},
+	"extends": "vue",
+	"plugins": [
+		"vue"
+	],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 8,
+		"ecmaFeatures": {
+			"globalReturn": true,
+			"impliedStrict": true,
+			"jsx": true,
+			"experimentalObjectRestSpread": true,
+			"allowImportExportEverywhere": false
+		}
+	},
+	"rules": {
+		"indent": [
+			"error",
+			2
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"never"
+		],
+		"linebreak-style": 0,
+		"space-before-function-paren": 0,
+		"comma-dangle": ["error", {
+				"arrays": "always",
+				"objects": "always",
+				"imports": "always",
+				"exports": "always",
+				"functions": "never"
+		}]
+	}
+}

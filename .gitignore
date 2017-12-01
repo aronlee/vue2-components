@@ -1,0 +1,10 @@
+node_modules/
+.happypack
+.tmp
+.idea
+.settings
+.project
+*.log
+*.dat
+dist
+zip
