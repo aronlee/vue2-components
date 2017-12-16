@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import demoRoutes from './views/demo/routes'
 
 Vue.use(VueRouter)
 
@@ -8,10 +9,8 @@ const routes = [
     path: '/',
     name: 'main',
     component: resolve => import(/* webpackChunkName: "main" */ './views/main').then(resolve),
-    meta: {
-      title: 'document',
-    },
   },
+  ...demoRoutes
 ]
 
 const router = new VueRouter({
