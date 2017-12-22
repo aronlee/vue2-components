@@ -18,7 +18,8 @@ import { logInfo } from "../util";
 const isDebug = !process.argv.includes('--release');
 
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3003
-const HOST = process.env.HOST || '0.0.0.0'
+// const HOST = process.env.HOST || '0.0.0.0'
+const HOST = process.env.HOST || '127.0.0.1'
 const isInteractive = process.stdout.isTTY
 
 function createCompilationPromise(name, compiler, config) {
@@ -64,26 +65,16 @@ async function start() {
 
   await createCompilationPromise('client', compiler, webpackConf);
 
-  server.listen(DEFAULT_PORT, HOST, err => {
+  server.listen(DEFAULT_PORT, HOST, function(err) {
     if (err) {
       return console.info(chalk.red(err));
     }
+    const address = this.address()
     console.log(chalk.cyan('Starting the development server...\n'));
+    console.log(`Server start at ${chalk.magenta.underline(`http://${address.address}:${address.port}`)}`)
     const urls = prepareUrls('http', HOST, DEFAULT_PORT);
     openBrowser(urls.localUrlForBrowser);
   })
-
-  // await new Promise((resolve, reject) =>
-  //   browserSync.create().init(
-  //     {
-  //       // https://www.browsersync.io/docs/options
-  //       server: 'src/server.js',
-  //       middleware: [server],
-  //       open: !process.argv.includes('--silent'),
-  //     },
-  //     (error, bs) => (error ? reject(error) : resolve(bs)),
-  //   ),
-  // );
 
   return server;
 }

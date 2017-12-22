@@ -7,7 +7,7 @@ export default {
   name: 'fs-router-transition',
   data() {
     return {}
-  }
+  },
 }
 </script>
 

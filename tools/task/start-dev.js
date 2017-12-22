@@ -49,21 +49,6 @@ function createCompilationPromise(name, compiler, config) {
     });
 
     compiler.plugin('done', stats => {
-      // const statsJson = stats.toJson({ errorDetails: false })
-
-      // const statsArr = extractBundles(statsJson)
-
-      // statsArr.forEach(st => {
-      //   console.log(chalk.yellow('name:'), st.name)
-      //   console.log(chalk.yellow('time:'), st.time)
-      //   console.log(chalk.yellow('hash:'), st.hash)
-      //   console.log(chalk.yellow('warnings:'), st.warnings)
-      //   console.log(chalk.yellow('errors:'), st.errors)
-      //   console.log(chalk.yellow('modules:'), buildModuleMap(st.modules))
-
-      // })
-
-      // console.info(stats.toString(config.stats));
       const timeEnd = new Date();
       const time = timeEnd.getTime() - timeStart.getTime();
       if (stats.hasErrors()) {
@@ -85,7 +70,7 @@ async function start() {
   const bs = browserSync.create()
 
   const handle = (err, stats) => {
-    
+
     const statsJson = stats.toJson({ errorDetails: false })
 
     const statsArr = extractBundles(statsJson)
@@ -107,18 +92,7 @@ async function start() {
     compiler.run(handle)
   }
 
-  // server.use(express.static(path.resolve(process.cwd(), './public')));
-
   await createCompilationPromise('client', compiler, webpackConf);
-
-  // server.listen(DEFAULT_PORT, HOST, err => {
-  //   if (err) {
-  //     return console.info(chalk.red(err));
-  //   }
-  //   console.log(chalk.cyan('Starting the development server...\n'));
-  //   const urls = prepareUrls('http', HOST, DEFAULT_PORT);
-  //   openBrowser(urls.localUrlForBrowser);
-  // })
 
   await new Promise((resolve, reject) =>
     bs.init(
