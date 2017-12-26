@@ -1,12 +1,24 @@
 <template>
-  <div class="fs-router-transition"></div>
+  <div :class="{
+    [`${prefixCls}-router-transition`]: true
+  }">
+
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'fs-router-transition',
+  name: 'router-transition',
+  props: {
+    prefixCls: {
+      default: 'fs',
+      type: String,
+    },
+  },
   data() {
-    return {}
+    return {
+
+    }
   },
 }
 </script>

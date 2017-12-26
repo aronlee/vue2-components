@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import demoRoutes from './views/demo/routes'
+import animationsRoutes from './views/animations/routes'
 
 Vue.use(VueRouter)
 
@@ -10,7 +11,8 @@ const routes = [
     name: 'main',
     component: resolve => import(/* webpackChunkName: "main" */ './views/main').then(resolve),
   },
-  ...demoRoutes
+  ...demoRoutes,
+  ...animationsRoutes
 ]
 
 const router = new VueRouter({
