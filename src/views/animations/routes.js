@@ -4,5 +4,5 @@ export default [
     path: '/animations',
     component: () => import(/* webpackChunkName: 'animations' */ './index'),
     children: [],
-  }
+  },
 ]

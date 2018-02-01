@@ -12,7 +12,7 @@ const routes = [
     component: resolve => import(/* webpackChunkName: "main" */ './views/main').then(resolve),
   },
   ...demoRoutes,
-  ...animationsRoutes
+  ...animationsRoutes,
 ]
 
 const router = new VueRouter({
