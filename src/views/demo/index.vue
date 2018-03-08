@@ -4,6 +4,7 @@
       <div class="title">demo all</div>
       <router-link class="demo-link" :to="{name: 'demo-filter'}">fs-filter</router-link>
       <router-link class="demo-link" :to="{name: 'demo-router-transition'}">fs-router-transition</router-link>
+      <router-link class="demo-link" :to="{name: 'demo-limit-input'}">fs-limit-input</router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -13,7 +14,6 @@
 export default {
   name: 'demo',
   data() {
-    console.log('page demo')
     return {
       direction: 'router-in',
     }

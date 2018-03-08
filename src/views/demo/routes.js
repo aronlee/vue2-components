@@ -16,9 +16,9 @@ export default [
         component: () => import(/* webpackChunkName: 'demo-router-transition' */ './router-transition'),
       },
       {
-        path: 'demo-router-transition',
-        name: 'demo-router-transition',
-        component: () => import(/* webpackChunkName: 'demo-router-transition' */ './router-transition'),
+        path: 'demo-limit-input',
+        name: 'demo-limit-input',
+        component: () => import(/* webpackChunkName: 'demo-limit-input' */ './limit-input'),
       },
     ],
   },

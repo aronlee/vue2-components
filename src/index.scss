@@ -9,7 +9,7 @@ body{
     color: #333;
     padding: 0;
     margin: 0;
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Microsoft YaHei", arial;
     height: 100%;
 }
@@ -51,4 +51,13 @@ body{
 }
 .text-center{
     text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
