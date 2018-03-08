@@ -1,12 +1,12 @@
 <template>
   <div class="main">
     <div class="main-entry">
-      <div class="main-entry-inner flex-column">
+      <div class="main-entry-inner">
         <a class="fs-btn btn-primary">
-          <span>examples</span>
+          <span>Example</span>
         </a>
         <a class="fs-btn btn-primary">
-          <span>documents</span>
+          <span>Document</span>
         </a>
       </div>
     </div>
@@ -42,9 +42,8 @@ export default {
 }
 
 .main-entry-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
   // justify-content: space-between;
   > .fs-btn:not(:last-child) {
     margin-bottom: 20px;
@@ -60,7 +59,11 @@ export default {
 }
 
 .fs-btn {
+  display: block;
+  text-align: center;
   padding: 8px 20px;
   background-color: #ffffff;
+  border-radius: 4px;
+  outline: 0 none;
 }
 </style>
