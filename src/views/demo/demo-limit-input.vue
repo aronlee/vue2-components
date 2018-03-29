@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import limitinput from '../../../directives/limitinput'
+import limitinput from '../../directives/limitinput'
 export default {
   name: 'limit-input',
   directives: {

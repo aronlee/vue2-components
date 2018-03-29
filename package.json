@@ -78,6 +78,7 @@
   "homepage": "https://github.com/aronlee/vue2-components#readme",
   "dependencies": {
     "vue": "^2.5.9",
+    "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1"
   }
 }

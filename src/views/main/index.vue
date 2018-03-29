@@ -2,12 +2,12 @@
   <div class="main">
     <div class="main-entry">
       <div class="main-entry-inner">
-        <a class="fs-btn btn-primary">
+        <router-link class="fs-btn btn-primary" :to="{name: 'demo'}">
           <span>Example</span>
-        </a>
-        <a class="fs-btn btn-primary">
+        </router-link>
+        <router-link class="fs-btn btn-primary" :to="{name: 'doc'}">
           <span>Document</span>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -17,16 +17,6 @@
 export default {
   name: 'main',
   data() {
-    const a = {
-      b: '1',
-      c: '2',
-    }
-
-    const m = Object.create(a)
-
-    for (const i in m) {
-      console.log(i)
-    }
     return {}
   },
 }

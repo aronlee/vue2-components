@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import RouterTransition	from '../../components/router-transition'
+import RouterTransition	from '../components/router-transition'
 export default {
   name: 'demo-router-transition',
   components: {
