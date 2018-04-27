@@ -61,3 +61,19 @@ body{
   display: flex;
   flex-direction: column;
 }
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.center-h {
+  justify-content: center;
+}
+
+.center-v {
+  align-items: center
+}

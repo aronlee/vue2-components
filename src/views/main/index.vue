@@ -8,6 +8,9 @@
         <router-link class="fs-btn btn-primary" :to="{name: 'doc'}">
           <span>Document</span>
         </router-link>
+        <router-link class="fs-btn btn-primary" :to="{name: 'verify'}">
+          <span>Verify</span>
+        </router-link>
       </div>
     </div>
   </div>
