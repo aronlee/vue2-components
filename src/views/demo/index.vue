@@ -6,6 +6,7 @@
       <router-link class="demo-link" :to="{name: 'demo-filter'}">Filter</router-link>
       <router-link class="demo-link" :to="{name: 'demo-router-transition'}">RouterTransition</router-link>
       <router-link class="demo-link" :to="{name: 'demo-limit-input'}">LimitInput</router-link>
+      <router-link class="demo-link" :to="{name: 'demo-dropdown-menu'}">DropdownMenu</router-link>
     </div>
     <router-view></router-view>
   </div>

@@ -25,6 +25,11 @@ export default [
         name: 'demo-limit-input',
         component: () => import(/* webpackChunkName: 'demo-limit-input' */ './demo-limit-input.vue'),
       },
+      {
+        path: 'demo-dropdown-menu',
+        name: 'demo-dropdown-menu',
+        component: () => import(/* webpackChunkName: 'demo-dropdown-menu' */ './demo-dropdown-menu.vue'),
+      },
     ],
   },
 ]
