@@ -3,54 +3,58 @@
     <div>demo-dropdown-menu</div>
     <div class="box-wrap">
       <div class="box-inner">
-        <div class="select" @click="handleDrop">
-          <span class="placeholder">请输入小区</span>
-          <span class="ipt-val"></span>
-        </div>
         <dropdown-menu
           v-model="show"
-          :menuList="menuList"
-          :aa="'aa'"
-          :bb="'bb'"
-        />
+          :menu-list="menuList"
+          :width="288"
+          @select="handleSelect"
+        >
+          <div class="select" @click="handleDrop">
+            <span class="placeholder">请输入小区</span>
+            <span class="ipt-val"></span>
+          </div>
+        </dropdown-menu>
       </div>
     </div>
     <div class="flex box-wrap">
       <div class="flex-1 select-wrap">
-        <div class="select" @click="show1 = true">
-          <span class="placeholder">请输入楼号</span>
-          <span class="ipt-val"></span>
-        </div>
         <dropdown-menu
           v-model="show1"
-          :menuList="menuList"
-          :aa="'aa'"
-          :bb="'bb'"
-        />
+          :menu-list="menuList"
+          :width="150"
+          @select="handleSelect"
+        >
+          <div class="select" @click="show1 = true">
+            <span class="placeholder">请输入楼号</span>
+            <span class="ipt-val"></span>
+          </div>
+        </dropdown-menu>
       </div>
       <div class="flex-1 select-wrap">
-        <div class="select" @click="show2 = true">
-          <span class="placeholder">请输入单元</span>
-          <span class="ipt-val"></span>
-        </div>
         <dropdown-menu
           v-model="show2"
-          :menuList="menuList"
-          :aa="'aa'"
-          :bb="'bb'"
-        />
+          :menu-list="menuList"
+          :width="150"
+          @select="handleSelect"
+        >
+          <div class="select" @click="show2 = true">
+            <span class="placeholder">请输入单元</span>
+            <span class="ipt-val"></span>
+          </div>
+        </dropdown-menu>
       </div>
       <div class="flex-1 select-wrap">
-        <div class="select" @click="show3 = true">
-          <span class="placeholder">请输入室号</span>
-          <span class="ipt-val"></span>
-        </div>
         <dropdown-menu
           v-model="show3"
-          :menuList="menuList"
-          :aa="'aa'"
-          :bb="'bb'"
-        />
+          :menu-list="menuList"
+          :width="150"
+          @select="handleSelect"
+        >
+          <div class="select" @click="show3 = true">
+            <span class="placeholder">请输入室号</span>
+            <span class="ipt-val"></span>
+          </div>
+        </dropdown-menu>
       </div>
     </div>
   </div>
@@ -86,6 +90,9 @@ export default {
     handleDrop() {
       this.show = true
     },
+    handleSelect(menu) {
+      console.log(menu)
+    },
   },
 }
 </script>
@@ -99,7 +106,6 @@ export default {
   }
 
   .box-inner {
-    padding-left: 16px;
     background-color: #ffffff;
     border-style: solid;
     border-color: #efefef;
@@ -112,6 +118,8 @@ export default {
     line-height: 48px;
     height: 48px;
     font-size: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
 
     .placeholder {
       color: #999999;
