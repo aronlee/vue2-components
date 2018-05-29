@@ -1,15 +1,31 @@
 <template>
-  <div class="getInputFile">
-    <div class="upload-list">
-      <i class="iconfont icon-close"></i>
-      <a type="file" class="add-btn"><p>获取录像</p> <input type="file" accept="video/*" capture="camcorder"></a></div> <div class="upload-list"><i class="iconfont icon-close"></i> <a type="file" class="add-btn"><p>获取照片</p> <input type="file" accept="image/*" capture="camera"></a></div></div>
+  <div class="demo-filter">
+    <fs-filter
+      :conf="filterConfData"
+      :selected="queryObj"
+      @on-filter="handleFilter"
+    />
+  </div>
 </template>
 
 <script>
+import Filter from '../components/filter'
 export default {
   name: 'demo-filter',
+  components: {
+    [Filter.name]: Filter,
+  },
   data() {
-    return {}
+    const { query } = this.$route
+    return {
+      filterConfData: this.filterConf,
+      queryObj: query,
+    }
+  },
+  methods: {
+    handleFilter() {
+
+    },
   },
 }
 </script>

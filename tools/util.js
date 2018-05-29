@@ -1,15 +1,16 @@
 import moment from 'moment'
+import os from 'os'
 
 /**
- * 
+ *
  * @desc hot热加载的时候每个entry都需要加载这两个uri
  * [
  *   'eventsource-polyfill', // Necessary for hot reloading with IE
  *   'webpack-hot-middleware/client?reload=true',
  * ]
- * @param {Array, Object} entry 
+ * @param {Array, Object} entry
  * @param {Array} hotModuels  上面那个数组
- * @returns 
+ * @returns
  */
 export function mergeModleToEntry(entry, hotModuels) {
   const entryType = typeof entry;
@@ -33,4 +34,15 @@ export function formatTime(time) {
 
 export function logInfo() {
   console.log.call(console, formatTime(Date.now()), ...arguments)
+}
+
+export function getLocalIp() {
+  let IPv4
+  for(let i = 0; i < os.networkInterfaces().en0.length; i++){
+    if(os.networkInterfaces().en0[i].family=='IPv4'){
+      IPv4 = os.networkInterfaces().en0[i].address
+      break
+    }
+  }
+  return IPv4
 }

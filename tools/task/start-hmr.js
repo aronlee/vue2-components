@@ -1,3 +1,4 @@
+import os from 'os'
 import webpack from 'webpack'
 import chalk from 'chalk'
 import express from 'express'
@@ -13,13 +14,13 @@ import {
   prepareUrls,
 } from 'react-dev-utils/WebpackDevServerUtils'
 
-import { logInfo } from "../util";
+import { logInfo, getLocalIp } from "../util";
 
 const isDebug = !process.argv.includes('--release');
 
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3003
 // const HOST = process.env.HOST || '0.0.0.0'
-const HOST = process.env.HOST || '127.0.0.1'
+const HOST = process.env.HOST || getLocalIp()
 const isInteractive = process.stdout.isTTY
 
 function createCompilationPromise(name, compiler, config) {

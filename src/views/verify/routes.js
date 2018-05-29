@@ -19,6 +19,11 @@ export default [
         name: 'verify-prev-route-step2',
         component: () => import(/* webpackChunkName: 'verify-prev-route-step2' */ './verify-prev-route-step2.vue'),
       },
+      {
+        path: 'verify-bugs-of-cell',
+        name: 'verify-bugs-of-cell',
+        component: () => import(/* webpackChunkName: 'verify-bugs-of-cell' */ './verify-bugs-of-cell.vue'),
+      },
     ],
   },
 ]

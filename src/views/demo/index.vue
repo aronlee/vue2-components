@@ -3,18 +3,26 @@
     <div v-if="$route.name === 'demo'" class="demo-title">
       <div class="title">demo all</div>
       <router-link class="demo-link" :to="{name: 'demo-scroll-load'}">ScrollLoad</router-link>
-      <router-link class="demo-link" :to="{name: 'demo-filter'}">Filter</router-link>
+      <!-- <router-link class="demo-link" :to="{name: 'demo-filter'}">Filter</router-link> -->
       <router-link class="demo-link" :to="{name: 'demo-router-transition'}">RouterTransition</router-link>
       <router-link class="demo-link" :to="{name: 'demo-limit-input'}">LimitInput</router-link>
       <router-link class="demo-link" :to="{name: 'demo-dropdown-menu'}">DropdownMenu</router-link>
     </div>
-    <router-view></router-view>
+    <router-transition class="">
+      <template slot-scope="slotProps">
+        <router-view :class="slotProps.routerCls"></router-view>
+      </template>
+    </router-transition>
   </div>
 </template>
 
 <script>
+import RouterTransition from '../components/router-transition'
 export default {
   name: 'demo',
+  components: {
+    [RouterTransition.name]: RouterTransition,
+  },
   data() {
     return {
       direction: 'router-in',

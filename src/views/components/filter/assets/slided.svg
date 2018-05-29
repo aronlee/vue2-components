@@ -1,0 +1,5 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="375" height="40" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0 V 40 H 375 V 0 Z" fill="#ffffff" stroke="transparent"/>
+  <path d="M0 40 H 375" stroke="#dcdada"  fill="transparent"/>
+</svg>

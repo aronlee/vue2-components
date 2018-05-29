@@ -4,6 +4,7 @@
       <div class="title">verify all</div>
       <router-link class="verify-link" :to="{name: 'verify-async-function'}">verify-async-function</router-link>
       <router-link class="verify-link" :to="{name: 'verify-prev-route-step1'}">verify-prev-route-step1</router-link>
+      <router-link class="verify-link" :to="{name: 'verify-bugs-of-cell'}">verify-bugs-of-cell</router-link>
     </div>
     <keep-alive>
       <router-view></router-view>
@@ -40,8 +41,6 @@ $bgc: #f2f2f2;
   font-size: 16px;
   line-height: 36px;
   display: block;
-  // border-bottom: 1px solid #757575;
-  // background-color: rgb(255, 102, 0);
   color: $orange;
   padding: 0 16px;
 }
