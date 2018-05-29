@@ -26,9 +26,9 @@ export default {
 </script>
 
 <style lang="scss">
-.demo-limitinput {
-  .display-input {}
-}
+// .demo-limitinput {
+//   .display-input {}
+// }
 .demo-limitinput-title {
   margin: 0;
   padding: 10px 16px;
